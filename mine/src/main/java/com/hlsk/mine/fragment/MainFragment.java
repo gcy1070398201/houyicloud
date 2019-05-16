@@ -48,6 +48,16 @@ public class MainFragment extends BaseLazyLoadFragment {
     }
 
     @Override
+    public void initData(@Nullable Bundle savedInstanceState) {
+        super.initData(savedInstanceState);
+        tvTest.setText(R.string.mine_app_name);
+        ImageLoader.getImageLoader(getActivity())
+                .setRadius(10)
+                .loadUrl("http://5b0988e595225.cdn.sohucs.com/images/20171202/a1cc52d5522f48a8a2d6e7426b13f82b.gif",imageView);
+
+    }
+
+    @Override
     protected void lazyLoadData() {
         tvTest.setText(R.string.mine_app_name);
         ImageLoader.getImageLoader(getActivity())

@@ -51,6 +51,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IActivit
                 setContentView(layoutResID);
                 //绑定到butterknife
                 mUnbinder = ButterKnife.bind(this);
+                ARouter.getInstance().inject(this);
 
             }
         } catch (Exception e) {

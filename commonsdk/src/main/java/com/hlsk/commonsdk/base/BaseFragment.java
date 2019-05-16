@@ -24,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.hlsk.commonsdk.base.delegate.IFragment;
 
 import butterknife.ButterKnife;
@@ -72,6 +73,8 @@ public abstract class BaseFragment extends Fragment implements IFragment {
         if (view != null) {
 
             mUnbinder = ButterKnife.bind(this, view);
+
+            ARouter.getInstance().inject(this);
         }
 
         return view;

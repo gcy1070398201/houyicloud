@@ -78,7 +78,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
-        ARouter.getInstance().inject(this);
+//        ARouter.getInstance().inject(this);
         //这里想展示组件向外提供服务的功能, 模拟下组件向宿主提供一些必要的信息, 这里为了简单就直接返回本地数据不请求网络了
 
         fragments = new ArrayList<>(4);
