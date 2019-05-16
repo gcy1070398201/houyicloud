@@ -1,0 +1,10 @@
+<resources>
+    <string name="public_app_name">厚益云</string>
+    <string name="public_module_name">app</string>
+    <string name="public_loading">加载中</string>
+
+    <string name="public_name_homepage">首页</string>
+    <string name="public_name_connection">人脉</string>
+    <string name="public_name_discovery">发现</string>
+    <string name="public_name_mine">我的</string>
+</resources>

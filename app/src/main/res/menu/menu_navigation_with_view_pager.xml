@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/i_homepage"
+        android:checked="true"
+        android:icon="@drawable/ic_audiotrack_black_24dp"
+        android:title="@string/home_page" />
+    <item
+        android:id="@+id/i_connection"
+        android:icon="@drawable/ic_backup_black_24dp"
+        android:title="@string/connection" />
+    <item
+        android:id="@+id/i_discover"
+        android:icon="@drawable/ic_camera_black_24dp"
+        android:title="@string/discover" />
+
+    <item
+        android:id="@+id/i_mine"
+        android:icon="@drawable/ic_camera_black_24dp"
+        android:title="@string/mine" />
+</menu>
