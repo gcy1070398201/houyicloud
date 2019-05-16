@@ -88,4 +88,5 @@ dependencies {
         compileOnly rootProject.ext.dependencies["canary-debug"]
         compileOnly rootProject.ext.dependencies["canary-release"]
     }
+
 }
