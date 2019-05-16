@@ -83,43 +83,10 @@ public class MainActivity extends BaseActivity {
 
         fragments = new ArrayList<>(4);
 
-        // create music fragment and add it
-        Fragment musicFragment = (Fragment) ARouter.getInstance().build(RouterHub.HOMEPAGE_MAIN_FRAGMENT).navigation();
-        if(musicFragment == null)
-            musicFragment = new Fragment();
-        Bundle bundle = new Bundle();
-        bundle.putString("title", getString(R.string.home_page));
-        musicFragment.setArguments(bundle);
-
-        // create backup fragment and add it
-
-        Fragment backupFragment = (Fragment) ARouter.getInstance().build(RouterHub.CONNECTION_MAIN_FRAGMENT).navigation();
-        if(backupFragment == null)
-             backupFragment = new Fragment();
-        bundle = new Bundle();
-        bundle.putString("title", getString(R.string.connection));
-        backupFragment.setArguments(bundle);
-
-        Fragment friendsFragment = (Fragment) ARouter.getInstance().build(RouterHub.DISCOVER_MAIN_FRAGMENT).navigation();
-        if(friendsFragment == null)
-            friendsFragment = new Fragment();
-        bundle = new Bundle();
-        bundle.putString("title", getString(R.string.discover));
-        friendsFragment.setArguments(bundle);
-
-//        Fragment mineFragment = new Fragment();
-        Fragment mineFragment = (Fragment) ARouter.getInstance().build(RouterHub.MINE_MAIN_FRAGMENT).navigation();
-        if(mineFragment == null)
-            mineFragment= new Fragment();
-        bundle = new Bundle();
-        bundle.putString("title", getString(R.string.mine));
-        mineFragment.setArguments(bundle);
-
-        // add to fragments for adapter
-        fragments.add(musicFragment);
-        fragments.add(backupFragment);
-        fragments.add(friendsFragment);
-        fragments.add(mineFragment);
+        fragments.add(getFragMent(RouterHub.HOMEPAGE_MAIN_FRAGMENT));
+        fragments.add(getFragMent(RouterHub.CONNECTION_MAIN_FRAGMENT));
+        fragments.add(getFragMent(RouterHub.DISCOVER_MAIN_FRAGMENT));
+        fragments.add(getFragMent(RouterHub.MINE_MAIN_FRAGMENT));
 
         // set adapter
         adapter = new VpAdapter(getSupportFragmentManager(), fragments);
@@ -131,6 +98,9 @@ public class MainActivity extends BaseActivity {
     }
 
 
+    private Fragment getFragMent(String path){
+        return (Fragment) ARouter.getInstance().build(path).navigation();
+    }
 
     @Override
     public void onBackPressed() {

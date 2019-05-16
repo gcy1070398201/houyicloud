@@ -52,7 +52,6 @@ public abstract class BaseActivity extends AppCompatActivity implements IActivit
                 //绑定到butterknife
                 mUnbinder = ButterKnife.bind(this);
 
-                ARouter.getInstance().inject(this);
             }
         } catch (Exception e) {
             if (e instanceof InflateException) throw e;
