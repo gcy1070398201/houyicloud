@@ -25,6 +25,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hlsk.commonsdk.base.BaseFragment;
+
 
 /**
  * ================================================

@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.hlsk.commonsdk.base.BaseLazyFragment;
+import com.hlsk.commonsdk.base.BaseLazyLoadFragment;
 import com.hlsk.commonsdk.core.RouterHub;
 import com.hlsk.discover.R;
 import com.hlsk.discover.R2;
@@ -31,7 +31,7 @@ import butterknife.BindView;
  */
 
 @Route(path = RouterHub.DISCOVER_MAIN_FRAGMENT)
-public class MainFragment extends BaseLazyFragment {
+public class MainFragment extends BaseLazyLoadFragment {
 
     @BindView(R2.id.tv_test)
     TextView tvTest;
@@ -43,8 +43,8 @@ public class MainFragment extends BaseLazyFragment {
     }
 
     @Override
-    public void onLazyLoad() {
-//        tvTest.setText(R.string.discover_app_name);
+    protected void lazyLoadData() {
+        tvTest.setText(R.string.discover_app_name);
     }
 
 

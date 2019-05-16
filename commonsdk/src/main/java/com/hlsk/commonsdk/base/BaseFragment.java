@@ -26,15 +26,20 @@ import android.view.ViewGroup;
 
 import com.hlsk.commonsdk.base.delegate.IFragment;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 /**
  * ================================================
-
+ * <p>
  * ================================================
  */
 public abstract class BaseFragment extends Fragment implements IFragment {
     protected final String TAG = this.getClass().getSimpleName();
 
     protected Context mContext;
+
+    private Unbinder mUnbinder;
 
     @Override
     public void onAttach(Context context) {
@@ -45,12 +50,23 @@ public abstract class BaseFragment extends Fragment implements IFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return initView(inflater, container, savedInstanceState);
+
+        View view = initView(inflater, container, savedInstanceState);
+
+        if (view != null) {
+
+            mUnbinder = ButterKnife.bind(this, view);
+        }
+
+        return view;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        if (mUnbinder != null && mUnbinder != Unbinder.EMPTY)
+            mUnbinder.unbind();
+        this.mUnbinder = null;
     }
 
     @Override
