@@ -30,7 +30,7 @@ import butterknife.ButterKnife;
  * ================================================
  */
 public class BaseApplication extends Application {
-
+    private static Context context;
     /**
      * 这里会在 {@link BaseApplication#onCreate} 之前被调用,可以做一些较早的初始化
      * 常用于 MultiDex 以及插件化框架的初始化
@@ -45,6 +45,7 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        context = this.getApplicationContext();
         if (BuildConfig.LOG_DEBUG) {//Timber日志打印
             ButterKnife.setDebug(true);
             ARouter.openLog();     // 打印日志
@@ -77,4 +78,8 @@ public class BaseApplication extends Application {
         //内存过低 时 Glide 清楚缓存
         Glide.get(this).clearMemory();
     }
+    public static Context getAppContext() {
+        return context;
+    }
+
 }
