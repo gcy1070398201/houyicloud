@@ -47,6 +47,22 @@ public abstract class BaseFragment extends Fragment implements IFragment {
         mContext = context;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        if (useEventBus()) {//如果要使用eventbus请将此方法返回true{
+        }
+
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        initData(savedInstanceState);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -62,11 +78,20 @@ public abstract class BaseFragment extends Fragment implements IFragment {
     }
 
     @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (mUnbinder != null && mUnbinder != Unbinder.EMPTY) {
+            try {
+                mUnbinder.unbind();
+            } catch (IllegalStateException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mUnbinder != null && mUnbinder != Unbinder.EMPTY)
-            mUnbinder.unbind();
-        this.mUnbinder = null;
     }
 
     @Override
