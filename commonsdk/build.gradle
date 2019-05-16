@@ -54,6 +54,9 @@ dependencies {
         exclude module: 'support-annotations'
         exclude module: 'support-compat'
     }
+    api(rootProject.ext.dependencies["glide"]) {
+        exclude module: 'glide-compiler'
+    }
     //tools
     api rootProject.ext.dependencies["androideventbus"]
     api(rootProject.ext.dependencies["arouter"]) {

@@ -19,6 +19,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.bumptech.glide.Glide;
 import com.hlsk.commonsdk.BuildConfig;
 
 import butterknife.ButterKnife;
@@ -61,4 +62,19 @@ public class BaseApplication extends Application {
 
     }
 
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        if (level==TRIM_MEMORY_UI_HIDDEN){
+            Glide.get(this).clearMemory();
+        }
+        Glide.get(this).trimMemory(level);
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        //内存过低 时 Glide 清楚缓存
+        Glide.get(this).clearMemory();
+    }
 }
