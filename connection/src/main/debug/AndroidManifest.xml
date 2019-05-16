@@ -13,8 +13,8 @@
     <application
         android:name="com.hlsk.commonsdk.base.BaseApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/connection_ic_launcher"
-        android:label="@string/connection_app_name"
+        android:icon="@mipmap/con_ic_launcher"
+        android:label="@string/con_app_name"
         android:supportsRtl="true"
         android:theme="@style/public_AppTheme">
 

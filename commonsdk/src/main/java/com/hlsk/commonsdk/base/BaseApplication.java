@@ -21,16 +21,18 @@ import android.content.Context;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.bumptech.glide.Glide;
 import com.hlsk.commonsdk.BuildConfig;
+import com.hlsk.commonsdk.okgo.OkGoUtils;
 
 import butterknife.ButterKnife;
 
 /**
  * ================================================
-
+ * <p>
  * ================================================
  */
 public class BaseApplication extends Application {
     private static Context context;
+
     /**
      * 这里会在 {@link BaseApplication#onCreate} 之前被调用,可以做一些较早的初始化
      * 常用于 MultiDex 以及插件化框架的初始化
@@ -52,6 +54,7 @@ public class BaseApplication extends Application {
             ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
         }
         ARouter.init(this); // 尽可能早,推荐在Application中初始化
+        OkGoUtils.initOkGo(this);
     }
 
     /**
@@ -66,7 +69,7 @@ public class BaseApplication extends Application {
     @Override
     public void onTrimMemory(int level) {
         super.onTrimMemory(level);
-        if (level==TRIM_MEMORY_UI_HIDDEN){
+        if (level == TRIM_MEMORY_UI_HIDDEN) {
             Glide.get(this).clearMemory();
         }
         Glide.get(this).trimMemory(level);
@@ -75,9 +78,10 @@ public class BaseApplication extends Application {
     @Override
     public void onLowMemory() {
         super.onLowMemory();
-        //内存过低 时 Glide 清楚缓存
+        //内存过低 时 Glide 清除缓存
         Glide.get(this).clearMemory();
     }
+
     public static Context getAppContext() {
         return context;
     }

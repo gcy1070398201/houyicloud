@@ -48,6 +48,9 @@ dependencies {
     api(rootProject.ext.dependencies["recyclerview-v7"]) {
         exclude module: 'support-annotations'
     }
+    api(rootProject.ext.dependencies["constraint-layout"]) {
+        exclude module: 'support-annotations'
+    }
     api rootProject.ext.dependencies["annotations"]
 
     api(rootProject.ext.dependencies["butterknife"]) {
@@ -63,5 +66,10 @@ dependencies {
         exclude module: 'support-v4'
         exclude module: 'support-annotations'
     }
+
+    //network
+    api rootProject.ext.dependencies["OkGo"]
+    api rootProject.ext.dependencies["OkRx2"]
+    api rootProject.ext.dependencies["OkServer"]
 
 }

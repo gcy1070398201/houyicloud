@@ -39,11 +39,11 @@ public class MainFragment extends BaseLazyLoadFragment {
 
     @Override
     public View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.connection_main_fragment, container, false);
+        return inflater.inflate(R.layout.con_main_fragment, container, false);
     }
 
     @Override
     protected void lazyLoadData() {
-        tvTest.setText(R.string.connection_app_name);
+        tvTest.setText(R.string.con_app_name);
     }
 }

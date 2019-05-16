@@ -1,1 +1,1 @@
-include ':app', ':commonsdk', ':commonres', ':commonservice', ':homepage', ':connection',':discover',':mine'
+include ':app', ':commonsdk', ':commonres', ':commonservice', ':homepage', ':connection',':discover',':mine', ':loginregister'

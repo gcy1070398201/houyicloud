@@ -16,7 +16,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public int initView(@Nullable Bundle savedInstanceState) {
-        return R.layout.connection_main_activity;
+        return R.layout.con_main_activity;
     }
 
     @Override
