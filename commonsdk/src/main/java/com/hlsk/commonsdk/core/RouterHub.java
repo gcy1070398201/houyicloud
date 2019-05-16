@@ -66,6 +66,7 @@ public interface RouterHub {
     String MINE_INFO_SERVICE = MINE + SERVICE + "/MineInfoService";
     String MINE_MAIN_FRAGMENT = MINE + "/MineFragment";
     String MINE_MAIN_ACTIVITY = MINE + "/MineActivity";
+    String MINE_MAIN_WEBVIEW_ACTIVITY = MINE + "/PublicWebViewActivity";
 
     /**
      * 首页分组

@@ -1,5 +1,7 @@
 package com.hlsk.commonsdk.utils;
 
+import android.view.View;
+
 /**
  * 防止快速点击事件工具类
  */
@@ -36,6 +38,20 @@ public class NoDoubleClickUtils {
         }
         lastClickTime = currentTime;
         return isClick2;
+    }
+    /**
+     * 重复点击
+     * @param view
+     * @return
+     */
+    public static boolean avoidRepeatClick(View view){
+        boolean flag = false;
+        long lastTime = view.getTag(-1)==null?0:(long)view.getTag(-1);
+        if (System.currentTimeMillis()-lastTime>1000){
+            flag = true;
+        }
+        view.setTag(-1,System.currentTimeMillis());
+        return flag;
     }
 
 }

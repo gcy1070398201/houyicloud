@@ -8,5 +8,9 @@
             android:label="@string/public_name_mine"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.PublicWebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
     </application>
 </manifest>
