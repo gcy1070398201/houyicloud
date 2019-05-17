@@ -66,6 +66,7 @@ dependencies {
         exclude module: 'support-v4'
         exclude module: 'support-annotations'
     }
+    api rootProject.ext.dependencies["takephoto"]
 
     api (rootProject.ext.dependencies["smart-refresh"]){
         exclude group: "com.android.support"

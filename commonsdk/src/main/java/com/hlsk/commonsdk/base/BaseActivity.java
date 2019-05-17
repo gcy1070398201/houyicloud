@@ -16,14 +16,11 @@
 package com.hlsk.commonsdk.base;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.AttributeSet;
 import android.view.InflateException;
-import android.view.View;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.hlsk.commonsdk.base.delegate.IActivity;
@@ -58,7 +55,10 @@ public abstract class BaseActivity extends AppCompatActivity implements IActivit
             if (e instanceof InflateException) throw e;
             e.printStackTrace();
         }
+
+
         initData(savedInstanceState);
+
     }
 
     @Override

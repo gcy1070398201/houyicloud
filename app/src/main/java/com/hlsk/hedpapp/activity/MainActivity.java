@@ -16,14 +16,11 @@
 package com.hlsk.hedpapp.activity;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
@@ -92,8 +89,26 @@ public class MainActivity extends BaseActivity {
         adapter = new VpAdapter(getSupportFragmentManager(), fragments);
         vp.setAdapter(adapter);
 
-        // binding with ViewPager
+//        // binding with ViewPager
         bnve.setupWithViewPager(vp);
+
+//        bnve.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                switch (menuItem.getItemId()){
+//                    case R.id.i_homepage:
+//                        break;
+//                    case R.id.i_connection:
+//                        break;
+//                    case R.id.i_discover:
+//                        break;
+//                    case R.id.i_mine:
+//                        break;
+//
+//                }
+//                return false;
+//            }
+//        });
 
     }
 
