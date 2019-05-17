@@ -3,6 +3,8 @@ package com.hlsk.commonsdk.base;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
+import com.hlsk.commonsdk.utils.Logger;
+
 import java.util.List;
 
 /**
@@ -55,6 +57,7 @@ public abstract class BaseLazyLoadFragment extends BaseFragment {
         }
         for (Fragment child : fragments) {
             if (child instanceof BaseLazyLoadFragment && ((BaseLazyLoadFragment) child).isVisibleToUser) {
+                Logger.d("子fragment可见");
                 ((BaseLazyLoadFragment) child).tryLoadData();
             }
         }
@@ -67,5 +70,13 @@ public abstract class BaseLazyLoadFragment extends BaseFragment {
             //通知子Fragment请求数据
             dispatchParentVisibleState();
         }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        isViewCreated = false;
+        isVisibleToUser = false;
+        isDataLoaded = false;
     }
 }
