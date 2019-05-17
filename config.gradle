@@ -29,6 +29,7 @@ ext {
             "cardview-v7"              : "com.android.support:cardview-v7:${version["androidSupportSdkVersion"]}",
             "annotations"              : "com.android.support:support-annotations:${version["androidSupportSdkVersion"]}",
             "recyclerview-v7"          : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
+            "constraint-layout"        : 'com.android.support.constraint:constraint-layout:1.1.3',
 
             //network
             "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
@@ -41,6 +42,11 @@ ext {
             "glide-compiler"           : "com.github.bumptech.glide:compiler:${version["glideSdkVersion"]}",
             "glide-loader-okhttp3"     : "com.github.bumptech.glide:okhttp3-integration:${version["glideSdkVersion"]}",
             "picasso"                  : "com.squareup.picasso:picasso:2.5.2",
+            "OkGo"                     : "com.lzy.net:okgo:3.0.4",//必须使用
+            "OkRx"                     : "com.lzy.net:okrx:1.0.2",//okrx和okrx2不能同时使用
+            "OkRx2"                    : "com.lzy.net:okrx2:2.0.2",
+            "OkServer"                 : "com.lzy.net:okserver:2.0.5",
+
 
             //view
             "autolayout"               : "com.zhy:autolayout:1.4.5",
@@ -110,7 +116,15 @@ ext {
             "umeng-analytics"          : "com.umeng.analytics:analytics:6.0.1",
             "agentweb"                 : "com.just.agentweb:agentweb:4.0.3-alpha@aar",
 
+            "umeng-analytics"          : "com.umeng.analytics:analytics:6.0.1",
+
+            //refresh
+            "smart-refresh"                    : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-15",
+            "smart-refresh-header"             : "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-15",
+            "base-recyclerview-adapter-helper" : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30",
+
             //takephoto
             "takephoto"                 : "org.devio.takephoto:takephoto_library:4.1.0",
+
     ]
 }
