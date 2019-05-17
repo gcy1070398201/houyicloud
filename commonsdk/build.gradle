@@ -78,7 +78,8 @@ dependencies {
 
     //network
     api rootProject.ext.dependencies["OkGo"]
-    api rootProject.ext.dependencies["OkRx2"]
     api rootProject.ext.dependencies["OkServer"]
+
+    api rootProject.ext.dependencies["multidex"]
 
 }

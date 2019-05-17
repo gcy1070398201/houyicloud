@@ -36,7 +36,6 @@ public class MainFragment extends BaseLazyLoadFragment {
     @BindView(R2.id.tv_test)
     TextView tvTest;
 
-
     @Override
     public View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.con_main_fragment, container, false);
