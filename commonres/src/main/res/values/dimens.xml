@@ -55,11 +55,13 @@
     <dimen name="public_mar_left_5dp">5dp</dimen>
     <dimen name="public_mar_left_6dp">6dp</dimen>
     <dimen name="public_mar_left_10dp">10dp</dimen>
+    <dimen name="public_mar_left_15dp">15dp</dimen>
 
     //marginRight
     <dimen name="public_mar_right_4dp">4dp</dimen>
     <dimen name="public_mar_right_5dp">5dp</dimen>
     <dimen name="public_mar_right_10dp">10dp</dimen>
+    <dimen name="public_mar_right_15dp">15dp</dimen>
 
     //marginBottom
     <dimen name="public_mar_bottom_4dp">4dp</dimen>

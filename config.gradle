@@ -59,7 +59,7 @@ ext {
             "paginate"                 : "com.github.markomilos:paginate:0.5.1",
             "vlayout"                  : "com.alibaba.android:vlayout:1.1.0@aar",
             "lottie"                   : "com.airbnb.android:lottie:2.7.0",
-            "autosize"                 : "me.jessyan:autosize:1.1.1",
+            "autosize"                 : "me.jessyan:autosize:1.1.2",
             "bottom-nav"               : "com.github.ittianyu:BottomNavigationViewEx:2.0.4",
 
             //rx1

@@ -68,6 +68,8 @@ dependencies {
     }
     api rootProject.ext.dependencies["takephoto"]
 
+    api rootProject.ext.dependencies["autosize"]
+
     api (rootProject.ext.dependencies["smart-refresh"]){
         exclude group: "com.android.support"
     }

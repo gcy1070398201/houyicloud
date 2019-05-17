@@ -1,3 +1,18 @@
 <resources>
+    <dimen name="con_1dp">1dp</dimen>
+    <dimen name="con_5dp">5.5dp</dimen>
+    <dimen name="con_11dp">11dp</dimen>
+    <dimen name="con_10dp">10dp</dimen>
+    <dimen name="con_8dp">8dp</dimen>
+    <dimen name="con_9dp">9dp</dimen>
+    <dimen name="con_35dp">35dp</dimen>
+    <dimen name="con_52dp">52dp</dimen>
+    <dimen name="con_44dp">44dp</dimen>
 
+    <dimen name="con_text_size_15">15sp</dimen>
+    <dimen name="con_text_size_16">16sp</dimen>
+    <dimen name="con_text_size_10">10sp</dimen>
+    <dimen name="con_text_size_12">12sp</dimen>
+    <dimen name="con_text_size_14">14sp</dimen>
+    <dimen name="con_text_size_30">30sp</dimen>
 </resources>
