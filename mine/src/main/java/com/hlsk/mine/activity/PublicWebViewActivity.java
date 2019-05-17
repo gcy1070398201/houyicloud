@@ -50,7 +50,6 @@ public class PublicWebViewActivity extends BaseActivity {
 
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
-        Log.e("url",url);
         initWebView(url);
     }
     private void initWebView(String url){
