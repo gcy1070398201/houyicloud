@@ -44,7 +44,7 @@ dependencies {
     api(rootProject.ext.dependencies["appcompat-v7"]) {
         exclude module: 'support-annotations'
     }
-    compileOnly rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["design"]
     api(rootProject.ext.dependencies["recyclerview-v7"]) {
         exclude module: 'support-annotations'
     }
@@ -66,6 +66,14 @@ dependencies {
         exclude module: 'support-v4'
         exclude module: 'support-annotations'
     }
+
+    api (rootProject.ext.dependencies["smart-refresh"]){
+        exclude group: "com.android.support"
+    }
+    api (rootProject.ext.dependencies["smart-refresh-header"]){
+        exclude group: "com.android.support"
+    }
+    api rootProject.ext.dependencies["base-recyclerview-adapter-helper"]
 
     //network
     api rootProject.ext.dependencies["OkGo"]

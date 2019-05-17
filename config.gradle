@@ -114,6 +114,12 @@ ext {
             "canary-debug"             : "com.squareup.leakcanary:leakcanary-android:${version["canarySdkVersion"]}",
             "canary-release"           : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",
             "umeng-analytics"          : "com.umeng.analytics:analytics:6.0.1",
-            "agentweb"                 : "com.just.agentweb:agentweb:4.0.3-alpha@aar"
+            "agentweb"                 : "com.just.agentweb:agentweb:4.0.3-alpha@aar",
+            "umeng-analytics"          : "com.umeng.analytics:analytics:6.0.1",
+
+            //refresh
+            "smart-refresh"                   : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-15",
+            "smart-refresh-header"             : "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-15",
+            "base-recyclerview-adapter-helper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30",
     ]
 }

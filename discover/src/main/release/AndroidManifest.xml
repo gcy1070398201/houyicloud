@@ -5,8 +5,14 @@
     <application>
         <activity
             android:name=".activity.MainActivity"
-            android:label="@string/public_name_discovery"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait"/>
+            android:label="@string/public_name_discovery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".test.TestListActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity android:name=".test.TestMultiActivity"></activity>
     </application>
+
 </manifest>

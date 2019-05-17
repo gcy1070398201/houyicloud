@@ -90,4 +90,10 @@ public interface RouterHub {
     String DISCOVER_MAIN_FRAGMENT = DISCOVER + "/DiscoverFragment";
 
 
+    /**
+     * 列表测试demo
+     */
+    String TEST_LIST = DISCOVER + "/TestActivity";
+    String TEST_LIST_MULTI = DISCOVER + "/TestMultiActivity";
+
 }

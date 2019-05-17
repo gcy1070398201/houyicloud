@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/public_white"
+    android:orientation="horizontal"
+    android:paddingLeft="8dp"
+    android:paddingTop="15dp"
+    android:paddingRight="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="6dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/discover_item_multi_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/public_black"
+                android:textSize="16dp"
+                tools:text="厚益云科技" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/discover_item_multi_tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/public_black"
+            android:textSize="12dp"
+            tools:text="北京市 | 昌平区" />
+
+        <TextView
+            android:id="@+id/discover_item_multi_tv_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:textColor="@color/public_black"
+            android:textSize="10dp"
+            tools:text="房地产" />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/discover_item_multi_img_head"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:src="@mipmap/discover_ic_launcher" />
+</LinearLayout>
