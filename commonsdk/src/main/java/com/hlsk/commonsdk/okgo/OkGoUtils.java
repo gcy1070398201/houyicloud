@@ -29,6 +29,7 @@ import okhttp3.OkHttpClient;
  * @Time 19:40
  */
 public class OkGoUtils {
+    
     public static void initOkGo(Application application) {
         //---------这里给出的是示例代码,告诉你可以这么传,实际使用的时候,根据需要传,不需要就不传-------------//
         HttpHeaders headers = new HttpHeaders();
