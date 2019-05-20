@@ -1,3 +1,4 @@
 <resources>
 
+    <dimen name="size_level5">20dp</dimen>
 </resources>

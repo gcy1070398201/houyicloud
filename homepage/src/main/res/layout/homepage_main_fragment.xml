@@ -1,15 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
 
-    <TextView
-        android:id="@+id/tv_test"
+    <com.hlsk.commonsdk.utils.ShowView
+        android:id="@+id/showView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/homepage_app_name"
-        android:gravity="center"/>
+        >
 
+    </com.hlsk.commonsdk.utils.ShowView>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartrefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="7.5dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_houyi_class"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <cn.bingoogolapple.bgabanner.BGABanner
+                    android:id="@+id/homepage_banner_content"
+                    style="@style/BannerDefaultStyle"
+                    android:layout_height="160dp"
+                    android:layout_margin="@dimen/size_level5"
+                    app:banner_contentBottomMargin="40dp"
+                    app:banner_indicatorGravity="bottom|center_horizontal"
+                    app:banner_isNeedShowIndicatorOnOnlyOnePage="true"
+                    app:banner_isNumberIndicator="false"
+                    app:banner_pointAutoPlayAble="true"
+                    app:banner_pointContainerBackground="@android:color/transparent"
+                    app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
+                    app:banner_transitionEffect="defaultEffect"/>
+
+                <TextView
+                    android:id="@+id/tv_houyi_new_leadership_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="热门供需"
+                    android:textColor="#333333"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/popular_supply_and_demand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/remen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="校友推荐"
+                    android:textColor="#333333"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/alumni_recommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>
