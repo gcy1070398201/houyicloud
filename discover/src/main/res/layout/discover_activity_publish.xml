@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_white"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".activity.DiscoverPublishActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/discover_publish_title"
+        android:textColor="@color/discover_color_333333"
+        android:textSize="@dimen/public_font_18sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/discover_publish_et_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:counterTextAppearance="@style/discoverInputCounterStyle"
+        app:hintEnabled="false">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/discover_publish_et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/discover_shape_item_bg"
+            android:hint="简要概述"
+            android:maxLength="30"
+            android:padding="15dp"
+            android:textColor="@color/discover_color_333333"
+            android:textColorHint="@color/discover_color_bbbbbb"
+            android:textSize="@dimen/public_font_15sp" />
+    </android.support.design.widget.TextInputLayout>
+    <!--描述 -->
+    <TextView
+        style="@style/discoverPublishTextViewStyle"
+        android:text="@string/discover_publish_desc" />
+
+    <EditText
+        android:id="@+id/discover_publish_et_content"
+        style="@style/discoverPublishEditTextStyle"
+        android:hint="详细描述具体商机内容" />
+
+    <TextView
+        android:id="@+id/discover_publish_et_content_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:text="0/200"
+        android:textColor="@color/discover_color_999999"
+        android:textSize="@dimen/public_font_10sp" />
+    <!--上传图片 -->
+    <TextView
+        style="@style/discoverPublishTextViewStyle"
+        android:text="@string/discover_publish_upload" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/discover_publish_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:listitem="@layout/discover_item_detail" />
+    <!--标签 -->
+    <TextView
+        style="@style/discoverPublishTextViewStyle"
+        android:text="@string/discover_publish_label" />
+
+    <EditText
+        android:id="@+id/discover_publish_et_label"
+        style="@style/discoverPublishEditTextStyle"
+        android:hint="输入1-3个标签内容，用空格分隔" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:text="@string/discover_publish_label_example"
+        android:textColor="@color/discover_color_333333"
+        android:textSize="@dimen/public_font_10sp" />
+</LinearLayout>

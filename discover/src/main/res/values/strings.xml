@@ -1,3 +1,10 @@
 <resources>
     <string name="discover_app_name">discover</string>
+
+    <string name="discover_publish_title">标题</string>
+    <string name="discover_publish_desc">描述</string>
+    <string name="discover_publish_upload">上传图片</string>
+    <string name="discover_publish_label">标签</string>
+    <string name="discover_publish_label_example">示例：汽车 发动机盖 碳纤维材质</string>
+
 </resources>

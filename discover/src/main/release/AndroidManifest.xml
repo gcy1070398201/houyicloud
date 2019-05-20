@@ -12,7 +12,9 @@
             android:name=".test.TestListActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait" />
-        <activity android:name=".test.TestMultiActivity"></activity>
+        <activity android:name=".test.TestMultiActivity" />
+        <activity android:name=".activity.DiscoverDetailActivity" />
+        <activity android:name=".activity.DiscoverPublishActivity"></activity>
     </application>
 
 </manifest>

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/public_white"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
@@ -13,14 +12,13 @@
         android:layout_marginBottom="8dp"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        android:visibility="gone"
         app:cardCornerRadius="@dimen/dp_4"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true"
         tools:targetApi="lollipop">
 
         <TextView
-            android:id="@+id/discover_tv_test"
+            android:id="@+id/discover_tv_test_frag"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
@@ -33,57 +31,39 @@
         android:layout_marginBottom="8dp"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        android:visibility="gone"
         app:cardCornerRadius="@dimen/dp_4"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true"
         tools:targetApi="lollipop">
 
         <TextView
-            android:id="@+id/discover_tv_test_multi"
+            android:id="@+id/discover_tv_test_multi_frag"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
             android:text="多布局" />
     </android.support.v7.widget.CardView>
 
-    <LinearLayout
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/discover_frag_test_sr"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="bottom"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
+        android:layout_height="match_parent">
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/discover_main_tab_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_weight="1"
-            android:background="@color/public_white"
-            app:tabBackground="@color/public_color_transparent"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="@color/public_color_transparent"
-            app:tabMode="fixed"
-            app:tabPaddingStart="0dp"
-            app:tabRippleColor="@color/public_color_transparent" />
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/discover_main_tab_img"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="bottom"
-            android:src="@mipmap/ic_launcher" />
-    </LinearLayout>
+        </com.scwang.smartrefresh.layout.header.ClassicsHeader>
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/discover_frag_test_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
-    <!--<include layout="@layout/discover_search" />-->
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/discover_main_view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp" />
+        </com.scwang.smartrefresh.layout.footer.ClassicsFooter>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>

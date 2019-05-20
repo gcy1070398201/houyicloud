@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:showIn="@layout/discover_main_fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/public_bg_search"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/corp_search_img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_search"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/corp_search_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:drawableLeft="@mipmap/icon_search"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:hint="搜索"
+            android:maxLines="1"
+            android:textColor="@color/discover_color_999999"
+            android:textSize="@dimen/discover_font_size_13" />
+
+    </LinearLayout>
+</LinearLayout>
