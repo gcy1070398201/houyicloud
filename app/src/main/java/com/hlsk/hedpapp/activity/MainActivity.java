@@ -81,9 +81,13 @@ public class MainActivity extends BaseActivity {
         fragments = new ArrayList<>(4);
 
         fragments.add(getFragMent(RouterHub.HOMEPAGE_MAIN_FRAGMENT));
-        fragments.add(getFragMent(RouterHub.CONNECTION_MAIN_FRAGMENT));
         fragments.add(getFragMent(RouterHub.DISCOVER_MAIN_FRAGMENT));
+        fragments.add(getFragMent(RouterHub.CONNECTION_MAIN_FRAGMENT));
         fragments.add(getFragMent(RouterHub.MINE_MAIN_FRAGMENT));
+
+        bnve.enableAnimation(false);
+        bnve.enableShiftingMode(false);
+        bnve.enableItemShiftingMode(false);
 
         // set adapter
         adapter = new VpAdapter(getSupportFragmentManager(), fragments);
