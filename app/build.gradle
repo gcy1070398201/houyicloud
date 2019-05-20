@@ -81,6 +81,8 @@ dependencies {
         exclude module: 'support-annotations'
     }
 
+    implementation 'q.rorbin:badgeview:1.1.0'
+
     //test
     debugImplementation rootProject.ext.dependencies["canary-debug"]
     releaseImplementation rootProject.ext.dependencies["canary-release"]

@@ -16,11 +16,15 @@
 package com.hlsk.hedpapp.activity;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
@@ -39,6 +43,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import q.rorbin.badgeview.Badge;
+import q.rorbin.badgeview.QBadgeView;
 
 
 /**
@@ -62,6 +68,8 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.vp)
     ViewPager vp;
 
+    Badge qBadgeView ;
+
 
     private long mPressedTime;
 
@@ -75,8 +83,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
-//        ARouter.getInstance().inject(this);
-        //这里想展示组件向外提供服务的功能, 模拟下组件向宿主提供一些必要的信息, 这里为了简单就直接返回本地数据不请求网络了
 
         fragments = new ArrayList<>(4);
 
@@ -85,34 +91,71 @@ public class MainActivity extends BaseActivity {
         fragments.add(getFragMent(RouterHub.CONNECTION_MAIN_FRAGMENT));
         fragments.add(getFragMent(RouterHub.MINE_MAIN_FRAGMENT));
 
-        bnve.enableAnimation(false);
-        bnve.enableShiftingMode(false);
-        bnve.enableItemShiftingMode(false);
-
         // set adapter
         adapter = new VpAdapter(getSupportFragmentManager(), fragments);
         vp.setAdapter(adapter);
 
-//        // binding with ViewPager
-        bnve.setupWithViewPager(vp);
+        initNavigationView();
 
-//        bnve.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-//                switch (menuItem.getItemId()){
-//                    case R.id.i_homepage:
-//                        break;
-//                    case R.id.i_connection:
-//                        break;
-//                    case R.id.i_discover:
-//                        break;
-//                    case R.id.i_mine:
-//                        break;
-//
-//                }
-//                return false;
-//            }
-//        });
+        bnve.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.i_homepage:
+                        vp.setCurrentItem(0,false);
+                        break;
+                    case R.id.i_connection:
+                        if(qBadgeView != null){
+                            qBadgeView.hide(true);
+                        }
+                        vp.setCurrentItem(2,false);
+                        break;
+                    case R.id.i_discover:
+                        vp.setCurrentItem(1,false);
+                        break;
+                    case R.id.i_mine:
+                        vp.setCurrentItem(3,false);
+                        break;
+
+                }
+                return true;
+            }
+        });
+
+        vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
+
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+                bnve.setCurrentItem(i);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
+
+    }
+
+    private void initNavigationView() {
+        bnve.enableAnimation(false);
+        bnve.enableShiftingMode(false);
+        bnve.enableItemShiftingMode(false);
+
+        // add badge
+        qBadgeView = addBadgeAt(2, 1);
+    }
+
+    private Badge addBadgeAt(int position, int number) {
+        // add badge
+        return new QBadgeView(this)
+                .setBadgeNumber(number)
+                .setGravityOffset(12, 2, true)
+                .bindTarget(bnve.getBottomNavigationItemView(position));
 
     }
 
