@@ -24,6 +24,25 @@ android {
         }
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
+
+//        ndk {
+//            abiFilters "armeabi", "armeabi-v7a"
+//        }
+    }
+
+    signingConfigs {
+        rel {
+            keyAlias 'HeApp'
+            keyPassword 'houYi!2018dp'
+            storeFile file('heapprel.jks')
+            storePassword 'houYiCloud!2018'
+        }
+        debug {
+            keyAlias 'HeApp'
+            keyPassword 'houYi!2018dp'
+            storeFile file('heapprel.jks')
+            storePassword 'houYiCloud!2018'
+        }
     }
 
     buildTypes {
@@ -43,7 +62,94 @@ android {
             shrinkResources true
             zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.rel
         }
+    }
+
+    flavorDimensions "app"
+
+    productFlavors {
+
+        product {
+
+            //个推
+            manifestPlaceholders = [
+
+                    GETUI_APP_ID            : "k8YAziIH1m9QgY8SFg0vS9",
+                    GETUI_APP_KEY           : "AA3LHYhNlY5Q9AJSXOMc49",
+                    GETUI_APP_SECRET        : "fQQLFSou7h6cwdXG2khsM",
+
+                    RONG_CLOUD_APP_KEY_VALUE: "c9kqb3rdco7wj"
+            ]
+
+            // Bugly
+            buildConfigField "String", "BUGLY_APP_ID", '"7c5f018f2b"'
+
+            //服务器地址
+            buildConfigField "String", "API_BASE_URL_DEAULT", '"https://app.houyicloud.com"'
+            buildConfigField "String", "OBS_IMAGE_URL", '"https://image.houyicloud.com/"'
+            buildConfigField "String", "OBS_FILE_URL", '"https://static.houyicloud.com/"'
+            buildConfigField "String", "SAVE_IMAGE_NAME", '"heimages"'
+            buildConfigField "String", "SAVE_HTML", '"hestatic"'
+
+            //RTC
+            buildConfigField "int", "TRTC_APPID", "1400143309"
+
+        }
+
+        preview {
+
+            //个推
+            manifestPlaceholders = [
+
+                    GETUI_APP_ID            : "jKLNyu7yzV86kLHBTflte4",
+                    GETUI_APP_KEY           : "V8fSulYjys7jqf8QSWnAE",
+                    GETUI_APP_SECRET        : "fIL7TWnWBP67ICh5fRdJ88",
+
+                    RONG_CLOUD_APP_KEY_VALUE: "pkfcgjstpoma8"
+            ]
+
+            // Bugly
+            buildConfigField "String", "BUGLY_APP_ID", '"9918f0c3e4"'
+
+            //服务器地址
+            buildConfigField "String", "API_BASE_URL_DEAULT", '"https://betaapp.houyicloud.com"'
+            buildConfigField "String", "OBS_IMAGE_URL", '"https://betaimage.houyicloud.com/"'
+            buildConfigField "String", "OBS_FILE_URL", '"https://betastatic.houyicloud.com/"'
+            buildConfigField "String", "SAVE_IMAGE_NAME", '"betaimages"'
+            buildConfigField "String", "SAVE_HTML", '"betastatic"'
+
+            //RTC
+            buildConfigField "int", "TRTC_APPID", "1400188153"
+        }
+
+        develop {
+
+            //个推
+            manifestPlaceholders = [
+                    GETUI_APP_ID            : "jKLNyu7yzV86kLHBTflte4",
+                    GETUI_APP_KEY           : "V8fSulYjys7jqf8QSWnAE",
+                    GETUI_APP_SECRET        : "fIL7TWnWBP67ICh5fRdJ88",
+
+                    RONG_CLOUD_APP_KEY_VALUE: "k51hidwqk4h4b"
+            ]
+
+            // Bugly
+            buildConfigField "String", "BUGLY_APP_ID", '"9918f0c3e4"'
+
+            //服务器地址
+            buildConfigField "String", "API_BASE_URL_DEAULT", '"http://devapp.houyicloud.com"'
+            buildConfigField "String", "OBS_IMAGE_URL", '"https://betaimage.houyicloud.com/"'
+            buildConfigField "String", "OBS_FILE_URL", '"https://betastatic.houyicloud.com/"'
+            buildConfigField "String", "SAVE_IMAGE_NAME", '"betaimages"'
+            buildConfigField "String", "SAVE_HTML", '"betastatic"'
+
+            //RTC
+            buildConfigField "int", "TRTC_APPID", "1400188153"
+
+        }
+
     }
 
     lintOptions {
@@ -51,8 +157,17 @@ android {
         disable "ResourceType"
         abortOnError false
     }
-}
 
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                outputFileName = "厚益云" + defaultConfig.versionName + "_${variant.productFlavors[0].name}" + ".apk"
+            }
+        }
+    }
+
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
@@ -80,6 +195,8 @@ dependencies {
     annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
         exclude module: 'support-annotations'
     }
+
+    implementation 'q.rorbin:badgeview:1.1.0'
 
     //test
     debugImplementation rootProject.ext.dependencies["canary-debug"]

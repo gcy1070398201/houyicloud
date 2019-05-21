@@ -11,12 +11,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.hlsk.commonsdk.base.BaseLazyLoadFragment;
 import com.hlsk.commonsdk.core.RouterHub;
 import com.hlsk.connection.R;
 import com.hlsk.connection.R2;
 import com.hlsk.connection.adapter.ConContactAdapter;
 import com.hlsk.connection.mode.ConTestMode;
+import com.hlsk.connection.util.ConRouterHub;
+import com.hlsk.connection.util.ConRouterUtil;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
@@ -25,6 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 
 /**
@@ -48,8 +53,10 @@ public class MainFragment extends BaseLazyLoadFragment {
     TextView conTvAlumnus;
     @BindView(R2.id.con_tv_industry)
     TextView conTvIndustry;
-    @BindView(R2.id.con_tv_enterprise)
-    TextView conTvEnterprise;
+    @BindView(R2.id.con_tv_up_enterprise)
+    TextView conTvUpEnterprise;
+    @BindView(R2.id.con_tv_down_enterprise)
+    TextView conTvDownEnterprise;
     @BindView(R2.id.con_info_rv)
     RecyclerView conInfoRv;
     @BindView(R2.id.con_info_sr)
@@ -91,6 +98,21 @@ public class MainFragment extends BaseLazyLoadFragment {
             }
         });
     }
+
+    @OnClick({R2.id.con_tv_alumnus,R2.id.con_tv_industry,R2.id.con_tv_up_enterprise,
+            R2.id.con_tv_down_enterprise})
+    public void onViewClick(View view){
+        if (view.getId()==R.id.con_tv_alumnus){
+            ConRouterUtil.go(ConRouterHub.con_Alumnus_activity,"type","1");
+        }else if (view.getId()==R.id.con_tv_industry){
+            ConRouterUtil.go(ConRouterHub.con_Alumnus_activity,"type","2");
+        }else if (view.getId()==R.id.con_tv_up_enterprise){
+            ConRouterUtil.go(ConRouterHub.con_Enterprise_activity,"type","1");
+        }else if (view.getId()==R.id.con_tv_down_enterprise){
+            ConRouterUtil.go(ConRouterHub.con_Enterprise_activity,"type","2");
+        }
+    }
+
     private void initData(){
         List<ConTestMode> conTestModeList=new ArrayList<>();
         ConTestMode conTestMode=new ConTestMode();
@@ -105,6 +127,15 @@ public class MainFragment extends BaseLazyLoadFragment {
         conTestModeList.add(conTestMode2);
         ConContactAdapter conContactAdapter=new ConContactAdapter(getActivity(),R.layout.con_home_item_layout,conTestModeList);
         conInfoRv.setAdapter(conContactAdapter);
+        conContactAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                ARouter.getInstance().build(ConRouterHub.con_Alumnus_activity)
+                        .withString("title","后E 校友录")
+                        .withString("type","1")
+                        .navigation();
+            }
+        });
     }
 
     @Override

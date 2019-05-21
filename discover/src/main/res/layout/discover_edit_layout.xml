@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <include layout="@layout/public_include_title"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="类型"
+                    android:textColor="@color/discover_color_333333"
+                    android:textSize="@dimen/public_font_18sp" />
+                <TextView
+                    android:layout_width="68dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/discover_click_resources_bg"
+                    android:text="资源"
+                    android:gravity="center"
+                    android:textColor="@color/discover_color_a52b2f"
+                    android:textSize="@dimen/public_font_15sp" />
+                <TextView
+                    android:layout_width="68dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/discover_unclick_demand_bg"
+                    android:gravity="center"
+                    android:text="需求"
+                    android:textColor="@color/discover_color_333333"
+                    android:textSize="@dimen/public_font_15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/discover_publish_title"
+                android:textColor="@color/discover_color_333333"
+                android:textSize="@dimen/public_font_18sp" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/discover_edit_et_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:counterTextAppearance="@style/discoverInputCounterStyle"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/discover_edit_et_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_72"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/discover_shape_item_bg"
+                    android:hint="简要概述"
+                    android:gravity="top|left"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="5dp"
+                    android:maxLength="30"
+                    android:textColor="@color/discover_color_333333"
+                    android:textColorHint="@color/discover_color_bbbbbb"
+                    android:textSize="@dimen/public_font_15sp" />
+            </android.support.design.widget.TextInputLayout>
+            <!--描述 -->
+            <TextView
+                style="@style/discoverPublishTextViewStyle"
+                android:text="@string/discover_publish_desc" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:counterTextAppearance="@style/discoverInputCounterStyle"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/discover_edit_et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/public_height_174dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/discover_shape_item_bg"
+                    android:hint="详细描述具体商机内容"
+                    android:gravity="top|left"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="5dp"
+                    android:maxLength="30"
+                    android:textColor="@color/discover_color_333333"
+                    android:textColorHint="@color/discover_color_bbbbbb"
+                    android:textSize="@dimen/public_font_15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--上传图片 -->
+            <TextView
+                style="@style/discoverPublishTextViewStyle"
+                android:text="@string/discover_publish_upload" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/discover_edit_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:listitem="@layout/discover_item_detail" />
+            <!--标签 -->
+            <TextView
+                style="@style/discoverPublishTextViewStyle"
+                android:text="@string/discover_publish_label" />
+
+            <EditText
+                android:id="@+id/discover_edit_et_label"
+                style="@style/discoverPublishEditTextStyle"
+                android:hint="输入1-3个标签内容，用空格分隔"
+                android:minHeight="45dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:text="@string/discover_publish_label_example"
+                android:textColor="@color/discover_color_333333"
+                android:textSize="@dimen/public_font_10sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/discover_shape_butten_bg"
+                android:text="立即发布"
+                android:gravity="center"
+                android:textColor="@color/public_white"
+                android:textSize="@dimen/public_font_18sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

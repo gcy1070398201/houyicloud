@@ -16,11 +16,16 @@
 package com.hlsk.commonsdk.base;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.InflateException;
+import android.view.View;
+import android.widget.TextView;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.hlsk.commonsdk.base.delegate.IActivity;
@@ -56,9 +61,54 @@ public abstract class BaseActivity extends AppCompatActivity implements IActivit
             e.printStackTrace();
         }
 
-
+        initToolbar();
         initData(savedInstanceState);
 
+    }
+
+    private void initToolbar(){
+        if (!getIntent().getBooleanExtra("isInitToolbar", false)) {
+            //由于加强框架的兼容性,故将 setContentView 放到 onActivityCreated 之后,onActivityStarted 之前执行
+            //而 findViewById 必须在 Activity setContentView() 后才有效,所以将以下代码从之前的 onActivityCreated 中移动到 onActivityStarted 中执行
+            getIntent().putExtra("isInitToolbar", true);
+            //这里全局给Activity设置toolbar和title,你想象力有多丰富,这里就有多强大,以前放到BaseActivity的操作都可以放到这里
+            if (findViewByName(getApplicationContext(), this, "public_toolbar") != null) {
+
+                    setSupportActionBar(findViewByName(getApplicationContext(),this, "public_toolbar"));
+                    getSupportActionBar().setDisplayShowTitleEnabled(false);
+                }
+            }
+
+            if (findViewByName(getApplicationContext(), this, "public_toolbar_title") != null) {
+                ((TextView) findViewByName(getApplicationContext(), this, "public_toolbar_title")).setText(getTitle());
+            }
+            if (findViewByName(getApplicationContext(), this, "public_toolbar_back") != null) {
+                findViewByName(getApplicationContext(), this, "public_toolbar_back").setOnClickListener(v -> {
+                    onBackPressed();
+                });
+            }
+
+    }
+
+    /**
+     * findview
+     *
+     * @param activity
+     * @param viewName
+     * @param <T>
+     * @return
+     */
+    public static <T extends View> T findViewByName(Context context, Activity activity, String viewName) {
+        int id = getResources(context).getIdentifier(viewName, "id", context.getPackageName());
+        T v = (T) activity.findViewById(id);
+        return v;
+    }
+
+    /**
+     * 获得资源
+     */
+    public static Resources getResources(Context context) {
+        return context.getResources();
     }
 
     @Override

@@ -37,7 +37,10 @@ captures/
 .idea
 
 # Keystore files
-*.jks
+#*.jks
 
 # MacOS
 .DS_Store
+
+gradle.properties
+local.properties

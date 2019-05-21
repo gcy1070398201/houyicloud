@@ -23,6 +23,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.bumptech.glide.Glide;
 import com.hlsk.commonsdk.BuildConfig;
 import com.hlsk.commonsdk.okgo.OkGoUtils;
+import com.lzy.ninegrid.NineGridView;
 
 import butterknife.ButterKnife;
 
@@ -58,6 +59,8 @@ public class BaseApplication extends Application {
         MultiDex.install(this);
         ARouter.init(this); // 尽可能早,推荐在Application中初始化
         OkGoUtils.initOkGo(this);
+
+        NineGridView.setImageLoader(new GlideImageLoader());
     }
 
     /**

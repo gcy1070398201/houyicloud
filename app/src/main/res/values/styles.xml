@@ -6,7 +6,7 @@
     </style>
 
     <style name="bnve_white_bg" parent="bnve">
-        <item name="android:background">@android:color/white</item>
+        <item name="android:background">#ffdcdddd</item>
     </style>
 
 </resources>

@@ -12,7 +12,8 @@
         android:layout_alignParentBottom="true"
         style="@style/bnve_white_bg"
         app:itemTextColor="@color/selector_item_gray_color"
-        app:menu="@menu/menu_navigation_with_view_pager" />
+        app:menu="@menu/menu_navigation_with_view_pager"
+        />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp"

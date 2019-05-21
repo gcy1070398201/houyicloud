@@ -7,4 +7,8 @@
     <string name="discover_publish_label">标签</string>
     <string name="discover_publish_label_example">示例：汽车 发动机盖 碳纤维材质</string>
 
+    <string name="discover_publish_contact">立即联系</string>
+
+    <!--二级页面标题-->
+    <string name="discover_detail_title">商机详情</string>
 </resources>

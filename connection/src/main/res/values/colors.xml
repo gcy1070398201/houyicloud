@@ -4,5 +4,5 @@
     <color name="con_text_color_666666">#666666</color>
     <color name="con_text_color_999999">#999999</color>
     <color name="con_text_color_444444">#444444</color>
-
+    <color name="con_line_color">#A52B2F</color>
 </resources>

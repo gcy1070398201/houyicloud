@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,16 +7,20 @@
     android:background="@color/public_white"
     tools:context=".activity.DiscoverDetailActivity">
 
+    <include layout="@layout/public_include_title" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/discover_shape_item_bg"
-        android:orientation="vertical">
+        android:layout_below="@+id/public_toolbar"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/discover_shape_item_ll_bg"
+            android:background="@color/public_white"
             android:padding="10dp">
 
             <TextView
@@ -48,7 +52,7 @@
                 android:layout_toRightOf="@+id/discover_detail_tv_company"
                 android:textColor="@color/discover_color_55b1fe"
                 android:textSize="@dimen/public_font_14sp"
-                tools:text="上游企业" />
+                tools:text="| 上游企业" />
 
             <TextView
                 android:id="@+id/discover_detail_tv_focus"
@@ -106,8 +110,29 @@
                 android:id="@+id/discover_detail_tv_rv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 app:layoutManager="android.support.v7.widget.GridLayoutManager"
                 tools:listitem="@layout/discover_item_detail" />
+
+            <RelativeLayout
+                android:id="@+id/discover_detail_rl_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="visible">
+
+                <com.lzy.ninegrid.NineGridView
+                    android:id="@+id/discover_detail_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:ngv_gridSpacing="8dp"
+                    app:ngv_maxSize="9"
+                    app:ngv_mode="grid"
+                    app:ngv_singleImageSize="100dp" />
+
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -125,5 +150,18 @@
 
             </RelativeLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/discover_detail_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/discover_shape_red_corner_4"
+            android:text="@string/discover_publish_contact"
+            android:textColor="@color/public_white"
+            android:textSize="@dimen/public_font_18sp" />
     </LinearLayout>
-</LinearLayout>
+
+
+</RelativeLayout>
