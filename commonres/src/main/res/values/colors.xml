@@ -6,6 +6,7 @@
     <color name="public_white">#FFFFFF</color>
     <color name="public_black">#000000</color>
     <color name="public_color_transparent">#00000000</color>
+    <color name="public_color_333333">#333333</color>
     <color name="public_color_4A4A4A">#4A4A4A</color>
     <color name="public_color_443636">#443636</color>
     <color name="public_color_53A8F4">#53A8F4</color>

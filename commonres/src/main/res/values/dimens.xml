@@ -22,6 +22,7 @@
 
     //高
     <dimen name="public_height_24dp">24dp</dimen>
+    <dimen name="public_height_48dp">48dp</dimen>
     <dimen name="public_height_50dp">50dp</dimen>
     <dimen name="public_height_54dp">54dp</dimen>
     <dimen name="public_height_67dp">67dp</dimen>
@@ -60,6 +61,7 @@
     <dimen name="public_mar_left_6dp">6dp</dimen>
     <dimen name="public_mar_left_10dp">10dp</dimen>
     <dimen name="public_mar_left_15dp">15dp</dimen>
+    <dimen name="public_mar_left_20dp">20dp</dimen>
 
     //marginRight
     <dimen name="public_mar_right_4dp">4dp</dimen>
