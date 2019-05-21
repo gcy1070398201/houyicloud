@@ -13,7 +13,9 @@
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait" />
         <activity android:name=".test.TestMultiActivity" />
-        <activity android:name=".activity.DiscoverDetailActivity" />
+        <activity
+            android:name=".activity.DiscoverDetailActivity"
+            android:label="@string/discover_detail_title" />
         <activity android:name=".activity.DiscoverPublishActivity"></activity>
     </application>
 
