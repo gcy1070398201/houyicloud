@@ -62,7 +62,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.HomePa
 
         public HomePageViewHolder(View itemView) {
             super(itemView);
-            textview = (TextView) itemView.findViewById(R.id.homepage_item_tv_title);
+            textview = (TextView) itemView.findViewById(R.id.homepage_item_business_tv_name);
         }
     }
 

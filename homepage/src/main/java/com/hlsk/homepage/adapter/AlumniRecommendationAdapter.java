@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hlsk.homepage.R;
@@ -31,13 +32,16 @@ public class AlumniRecommendationAdapter extends RecyclerView.Adapter<AlumniReco
     @NonNull
     @Override
     public AlumniRecommendationViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View itemView=inflater.inflate(R.layout.homepage_main_item,null);
+        View itemView=inflater.inflate(R.layout.homepage_alumnrecommendation_item,null);
         return new AlumniRecommendationViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull AlumniRecommendationViewHolder alumniRecommendationViewHolder, int position) {
-        alumniRecommendationViewHolder.textview.setText(mAlumniRecommendationBeanList.get(position).getTitle());
+        alumniRecommendationViewHolder.item_name.setText(mAlumniRecommendationBeanList.get(position).getName());
+        alumniRecommendationViewHolder.item_position.setText(mAlumniRecommendationBeanList.get(position).getPosition());
+        alumniRecommendationViewHolder.item_company.setText(mAlumniRecommendationBeanList.get(position).getCompany());
+
         alumniRecommendationViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,11 +59,17 @@ public class AlumniRecommendationAdapter extends RecyclerView.Adapter<AlumniReco
 
 
     class AlumniRecommendationViewHolder extends RecyclerView.ViewHolder {
-        private TextView textview;
+        private ImageView item_head;
+        private TextView item_name;
+        private TextView item_position;
+        private TextView item_company;
 
         public AlumniRecommendationViewHolder(View itemView) {
             super(itemView);
-            textview = (TextView) itemView.findViewById(R.id.homepage_item_tv_title);
+            item_head = (ImageView) itemView.findViewById(R.id.item_head);
+            item_name = (TextView) itemView.findViewById(R.id.item_name);
+            item_position = (TextView) itemView.findViewById(R.id.item_position);
+            item_company = (TextView) itemView.findViewById(R.id.item_company);
         }
     }
 

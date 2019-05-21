@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <color name="homepage_color_333333">#FF333333</color>
+    <color name="homepage_color_666666">#FF666666</color>
+    <color name="homepage_color_999999">#FF999999</color>
+    <color name="homepage_color_black">#FF000000</color>
+    <color name="homepage_color_f5f5f5">#fff5f5f5</color>
+    <color name="homepage_color_55b1fe">#ff55b1fe</color>
+    <color name="homepage_color_a52b2f">#FFA52B2F</color>
+    <color name="homepage_chomepage_color_333333olor_f0eff0">#FFF0EFF0</color>
+    <color name="homepage_color_f2eef0">#FFF2EEF0</color>
+    <color name="homepage_color_bbbbbb">#FFBBBBBB</color>
 </resources>

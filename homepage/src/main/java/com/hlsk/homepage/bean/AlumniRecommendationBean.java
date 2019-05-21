@@ -6,31 +6,31 @@ package com.hlsk.homepage.bean;
  * @Time 16:45
  */
 public class AlumniRecommendationBean {
-    private String title;
-    private String content;
-    private String imageUrl;
+    private String name;
+    private String position;
+    private String company;
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public String getContent() {
-        return content;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public String getPosition() {
+        return position;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public String getCompany() {
+        return company;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setCompany(String company) {
+        this.company = company;
     }
 }

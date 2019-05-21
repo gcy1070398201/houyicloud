@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/homepage_shape_item_bg"
+        >
+
+        <ImageView
+            android:id="@+id/item_head"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <TextView
+            android:id="@+id/homepage_item_business_tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/homepage_shape_red_corner_4"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginLeft="11dp"
+            android:text="后E12班"
+            android:textColor="@color/public_white"
+            android:textSize="@dimen/public_font_10sp"
+            />
+
+        <LinearLayout
+            android:id="@+id/item_name_position"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@+id/item_head"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/public_color_333333"
+                android:textSize="15sp"
+                tools:text="李东"
+                />
+
+            <ImageView
+                android:id="@+id/item_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:src="@color/public_black"
+                />
+
+            <TextView
+                android:id="@+id/item_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/public_black"
+                android:textSize="14sp"
+                tools:text="总经理"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_name_position"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/item_head"
+            android:textColor="@color/public_color_999999"
+            android:textSize="14dp"
+            tools:text="北京京东世纪商贸"
+            />
+    </RelativeLayout>
+</RelativeLayout>

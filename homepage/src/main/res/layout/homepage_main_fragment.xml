@@ -28,7 +28,6 @@
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="7.5dp"
             >
 
             <LinearLayout
@@ -41,23 +40,23 @@
                 <cn.bingoogolapple.bgabanner.BGABanner
                     android:id="@+id/homepage_banner_content"
                     style="@style/BannerDefaultStyle"
-                    android:layout_height="160dp"
-                    android:layout_margin="@dimen/size_level5"
-                    app:banner_contentBottomMargin="40dp"
+                    android:layout_height="215dp"
+                    app:banner_contentBottomMargin="30dp"
                     app:banner_indicatorGravity="bottom|center_horizontal"
                     app:banner_isNeedShowIndicatorOnOnlyOnePage="true"
                     app:banner_isNumberIndicator="false"
                     app:banner_pointAutoPlayAble="true"
                     app:banner_pointContainerBackground="@android:color/transparent"
                     app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
-                    app:banner_transitionEffect="defaultEffect"/>
+                    app:banner_transitionEffect="defaultEffect"
+                    />
 
                 <TextView
                     android:id="@+id/tv_houyi_new_leadership_class"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
                     android:text="热门供需"
                     android:textColor="#333333"
                     android:textSize="20dp"
@@ -84,16 +83,12 @@
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/alumni_recommendation"
+                    android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
             </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
-
-        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>
