@@ -88,7 +88,7 @@
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginTop="1dp"
             android:layout_toRightOf="@+id/item_head"
-            android:textColor="@color/public_color_999999"
+            android:textColor="@color/homepage_color_999999"
             android:textSize="14dp"
             tools:text="北京京东世纪商贸"
             />
