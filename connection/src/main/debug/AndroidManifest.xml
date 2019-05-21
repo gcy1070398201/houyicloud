@@ -21,7 +21,6 @@
         android:theme="@style/public_AppTheme">
 
         <activity android:name=".activity.MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,7 +38,14 @@
         <meta-data
             android:name="design_height_in_dp"
             android:value="667" />
-
-
+        <activity android:name=".activity.AlumnusActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AlumnusListActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.EnterpriseActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
     </application>
 </manifest>

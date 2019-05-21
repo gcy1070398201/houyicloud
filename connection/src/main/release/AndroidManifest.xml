@@ -8,5 +8,14 @@
             android:label="@string/public_name_connection"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AlumnusActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AlumnusListActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.EnterpriseActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
     </application>
 </manifest>

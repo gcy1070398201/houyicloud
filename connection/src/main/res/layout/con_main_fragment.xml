@@ -45,11 +45,22 @@
             android:textColor="@color/con_text_color_333333"
             android:gravity="center|left"/>
         <TextView
-            android:id="@+id/con_tv_enterprise"
+            android:id="@+id/con_tv_up_enterprise"
             android:layout_width="match_parent"
             android:minWidth="@dimen/con_52dp"
             android:layout_height="wrap_content"
-            android:text="@string/con_str_enterprise"
+            android:text="@string/con_str_up_enterprise"
+            android:background="@color/public_white"
+            android:drawableRight="@mipmap/ic_launcher"
+            android:textSize="@dimen/public_font_16sp"
+            android:textColor="@color/con_text_color_333333"
+            android:gravity="center|left"/>
+        <TextView
+            android:id="@+id/con_tv_down_enterprise"
+            android:layout_width="match_parent"
+            android:minWidth="@dimen/con_52dp"
+            android:layout_height="wrap_content"
+            android:text="@string/con_str_down_enterprise"
             android:background="@color/public_white"
             android:drawableRight="@mipmap/ic_launcher"
             android:textSize="@dimen/public_font_16sp"

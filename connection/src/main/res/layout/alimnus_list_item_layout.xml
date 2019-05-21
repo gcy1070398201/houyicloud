@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ResourceName">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_height_80dp"
+        android:layout_marginRight="@dimen/public_mar_left_15dp"
+        android:layout_marginLeft="@dimen/public_mar_left_15dp"
+        >
+        <ImageView
+            android:id="@+id/con_item_img"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="19dp"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/con_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/con_item_img"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="11dp"
+            android:text="甲酸钠"
+            android:textColor="@color/con_text_color_444444"
+            android:textSize="@dimen/con_text_size_14"/>
+        <TextView
+            android:id="@+id/con_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/con_item_img"
+            android:text=""
+            android:textColor="@color/con_text_color_999999"
+            android:textSize="@dimen/con_text_size_12"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -2,6 +2,7 @@
     <string name="con_app_name">connection</string>
     <string name="con_str_alumnus">后E  校友录</string>
     <string name="con_str_industry">产业联盟</string>
-    <string name="con_str_enterprise">上下游企业</string>
+    <string name="con_str_up_enterprise">上游企业</string>
+    <string name="con_str_down_enterprise">下游企业</string>
     <string name="con_str_connections">人脉</string>
 </resources>

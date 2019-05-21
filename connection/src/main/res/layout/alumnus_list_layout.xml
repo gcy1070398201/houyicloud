@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+    <include layout="@layout/public_include_title"/>
+    <TextView
+        android:id="@+id/con_alumnus_list_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/con_44dp"
+        android:drawableBottom="@mipmap/ic_launcher"
+        android:paddingLeft="@dimen/public_mar_left_15dp"
+        android:text="测试"
+        android:textColor="@color/con_text_color_666666"
+        android:textSize="@dimen/con_text_size_15" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/con_alumnus_list_sr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/public_white">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.scwang.smartrefresh.layout.header.ClassicsHeader>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/con_alumnus_list_hot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/public_mar_left_15dp"
+                android:paddingRight="@dimen/public_mar_left_15dp"
+                tools:listitem="@layout/con_home_item_layout" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="9dp"
+                android:background="@color/public_color_E5E5E5"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/con_alumnus_list_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/public_mar_left_15dp"
+                android:paddingRight="@dimen/public_mar_left_15dp"
+                tools:listitem="@layout/con_home_item_layout" />
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.scwang.smartrefresh.layout.footer.ClassicsFooter>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/public_white"
     android:orientation="vertical"
-    android:padding="15dp">
+    android:padding="15dp"
+    tools:ignore="MissingDefaultResource">
 
     <TextView
         android:layout_width="wrap_content"
