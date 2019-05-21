@@ -101,7 +101,6 @@ public class MainActivity extends BaseActivity {
 
         initEvent();
 
-        CrashReport.testJavaCrash();
     }
 
     private void initEvent(){
