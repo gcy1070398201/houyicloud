@@ -3,22 +3,22 @@
     <item
         android:id="@+id/i_homepage"
         android:checked="true"
-        android:icon="@drawable/selector_face"
+        android:icon="@drawable/selector_homepage"
         android:title="@string/home_page" />
 
     <item
         android:id="@+id/i_discover"
-        android:icon="@drawable/selector_weather"
+        android:icon="@drawable/selector_discover"
         android:title="@string/discover" />
 
     <item
         android:id="@+id/i_connection"
-        android:icon="@drawable/selector_lamp"
+        android:icon="@drawable/selector_connection"
         android:title="@string/connection" />
 
 
     <item
         android:id="@+id/i_mine"
-        android:icon="@drawable/selector_face"
+        android:icon="@drawable/selector_mine"
         android:title="@string/mine" />
 </menu>
