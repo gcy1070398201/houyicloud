@@ -26,7 +26,7 @@ public class DiscoverPublishActivity extends BaseActivity {
 
     @Override
     public int initView(@Nullable Bundle savedInstanceState) {
-        return R.layout.discover_activity_publish;
+        return R.layout.discover_activity_edit;
     }
 
     @Override
