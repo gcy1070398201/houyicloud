@@ -30,6 +30,7 @@
                     android:textColor="@color/discover_color_333333"
                     android:textSize="@dimen/public_font_18sp" />
                 <TextView
+                    android:id="@+id/discover_tv_resources"
                     android:layout_width="68dp"
                     android:layout_height="28dp"
                     android:layout_marginTop="15dp"
@@ -40,10 +41,11 @@
                     android:textColor="@color/discover_color_a52b2f"
                     android:textSize="@dimen/public_font_15sp" />
                 <TextView
+                    android:id="@+id/discover_tv_demand"
                     android:layout_width="68dp"
                     android:layout_height="28dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginLeft="3dp"
+                    android:layout_marginLeft="1dp"
                     android:background="@drawable/discover_unclick_demand_bg"
                     android:gravity="center"
                     android:text="需求"
@@ -150,6 +152,7 @@
                 android:textColor="@color/discover_color_333333"
                 android:textSize="@dimen/public_font_10sp" />
             <TextView
+                android:id="@+id/discover_tv_push"
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
                 android:layout_marginTop="20dp"
