@@ -97,6 +97,11 @@ public class MainActivity extends BaseActivity {
 
         initNavigationView();
 
+        initEvent();
+    }
+
+    private void initEvent(){
+
         bnve.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -138,7 +143,6 @@ public class MainActivity extends BaseActivity {
 
             }
         });
-
     }
 
     private void initNavigationView() {
