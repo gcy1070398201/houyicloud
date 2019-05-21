@@ -84,4 +84,9 @@ dependencies {
 
     api rootProject.ext.dependencies["multidex"]
     api rootProject.ext.dependencies["ninegridview"]
+
+    //bugly
+    api rootProject.ext.dependencies["bugly"]
+    api rootProject.ext.dependencies["bugly-native"]
+
 }

@@ -47,19 +47,21 @@ ext {
             "OkRx2"                           : "com.lzy.net:okrx2:2.0.2",
             "OkServer"                        : "com.lzy.net:okserver:2.0.5",
 
+
             //view
-            "autolayout"                      : "com.zhy:autolayout:1.4.5",
-            "butterknife"                     : "com.jakewharton:butterknife:${version["butterknifeSdkVersion"]}",
-            "butterknife-compiler"            : "com.jakewharton:butterknife-compiler:${version["butterknifeSdkVersion"]}",
-            "pickerview"                      : "com.contrarywind:Android-PickerView:3.2.5",
-            "photoview"                       : "com.github.chrisbanes.photoview:library:1.2.3",
-            "numberprogressbar"               : "com.daimajia.numberprogressbar:library:1.2@aar",
-            "nineoldandroids"                 : "com.nineoldandroids:library:2.4.0",
-            "paginate"                        : "com.github.markomilos:paginate:0.5.1",
-            "vlayout"                         : "com.alibaba.android:vlayout:1.1.0@aar",
-            "lottie"                          : "com.airbnb.android:lottie:2.7.0",
-            "autosize"                        : "me.jessyan:autosize:1.1.2",
-            "bottom-nav"                      : "com.github.ittianyu:BottomNavigationViewEx:2.0.4",
+            "autolayout"               : "com.zhy:autolayout:1.4.5",
+            "butterknife"              : "com.jakewharton:butterknife:${version["butterknifeSdkVersion"]}",
+            "butterknife-compiler"     : "com.jakewharton:butterknife-compiler:${version["butterknifeSdkVersion"]}",
+            "pickerview"               : "com.contrarywind:Android-PickerView:3.2.5",
+            "photoview"                : "com.github.chrisbanes.photoview:library:1.2.3",
+            "numberprogressbar"        : "com.daimajia.numberprogressbar:library:1.2@aar",
+            "nineoldandroids"          : "com.nineoldandroids:library:2.4.0",
+            "paginate"                 : "com.github.markomilos:paginate:0.5.1",
+            "vlayout"                  : "com.alibaba.android:vlayout:1.1.0@aar",
+            "lottie"                   : "com.airbnb.android:lottie:2.7.0",
+            "autosize"                 : "me.jessyan:autosize:1.1.2",
+            "bottom-nav"               : "com.github.ittianyu:BottomNavigationViewEx:2.0.4",
+            "agentweb"                 : "com.just.agentweb:agentweb:4.0.3-alpha@aar",
 
             //rx1
             "rxandroid"                       : "io.reactivex:rxandroid:1.2.1",
@@ -101,21 +103,20 @@ ext {
             "lifecyclemodel"                  : "me.jessyan:lifecyclemodel:1.0.1",
 
             //test
-            "junit"                           : "junit:junit:4.12",
-            "androidJUnitRunner"              : "android.support.test.runner.AndroidJUnitRunner",
-            "runner"                          : "com.android.support.test:runner:1.0.1",
-            "espresso-core"                   : "com.android.support.test.espresso:espresso-core:${version["espressoSdkVersion"]}",
-            "espresso-contrib"                : "com.android.support.test.espresso:espresso-contrib:${version["espressoSdkVersion"]}",
-            "espresso-intents"                : "com.android.support.test.espresso:espresso-intents:${version["espressoSdkVersion"]}",
-            "mockito-core"                    : "org.mockito:mockito-core:1.+",
-            "timber"                          : "com.jakewharton.timber:timber:4.7.1",
-            "logger"                          : "com.orhanobut:logger:2.2.0",
-            "canary-debug"                    : "com.squareup.leakcanary:leakcanary-android:${version["canarySdkVersion"]}",
-            "canary-release"                  : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",
-            "umeng-analytics"                 : "com.umeng.analytics:analytics:6.0.1",
-            "agentweb"                        : "com.just.agentweb:agentweb:4.0.3-alpha@aar",
-
-            "umeng-analytics"                 : "com.umeng.analytics:analytics:6.0.1",
+            "junit"                    : "junit:junit:4.12",
+            "androidJUnitRunner"       : "android.support.test.runner.AndroidJUnitRunner",
+            "runner"                   : "com.android.support.test:runner:1.0.1",
+            "espresso-core"            : "com.android.support.test.espresso:espresso-core:${version["espressoSdkVersion"]}",
+            "espresso-contrib"         : "com.android.support.test.espresso:espresso-contrib:${version["espressoSdkVersion"]}",
+            "espresso-intents"         : "com.android.support.test.espresso:espresso-intents:${version["espressoSdkVersion"]}",
+            "mockito-core"             : "org.mockito:mockito-core:1.+",
+            "timber"                   : "com.jakewharton.timber:timber:4.7.1",
+            "logger"                   : "com.orhanobut:logger:2.2.0",
+            "canary-debug"             : "com.squareup.leakcanary:leakcanary-android:${version["canarySdkVersion"]}",
+            "canary-release"           : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",
+            "umeng-analytics"          : "com.umeng.analytics:analytics:6.0.1",
+            "bugly"                    : "com.tencent.bugly:crashreport:2.8.6.0", //Bugly
+            "bugly-native"             : "com.tencent.bugly:nativecrashreport:3.6.0.1", //Bugly-Native
 
             //refresh
             "smart-refresh"                   : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-15",

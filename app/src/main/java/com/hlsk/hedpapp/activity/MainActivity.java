@@ -38,6 +38,8 @@ import com.hlsk.commonservice.homepage.service.HomPageInfoService;
 import com.hlsk.commonservice.mine.service.MineInfoService;
 import com.hlsk.hedpapp.R;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -98,6 +100,8 @@ public class MainActivity extends BaseActivity {
         initNavigationView();
 
         initEvent();
+
+        CrashReport.testJavaCrash();
     }
 
     private void initEvent(){
